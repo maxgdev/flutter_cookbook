@@ -28,7 +28,10 @@ Route _createRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, 1.0);
       var end = Offset.zero;
-      var curve = Curves.ease;
+      var curve = Curves.bounceIn;
+      // var curve = Curves.easeIn;
+      // var curve = Curves.easeInOut;
+      // var curve = Curves.decelerate;
 
       var tween = Tween(begin: begin, end: end);
       var curvedAnimation = CurvedAnimation(
