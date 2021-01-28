@@ -1,108 +1,75 @@
-// Animate a widget using a physics simulation
-// https://flutter.dev/docs/cookbook/animation/physics-simulation
-// physics_page.dart --> rename to main.dart
+// Animate the properties of a container
+// https://flutter.dev/docs/cookbook/animation/animated-container
+// animated_container.dart --> rename to main.dart
 
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 
-main() {
-  runApp(MaterialApp(home: PhysicsCardDragDemo()));
+void main() => runApp(AnimatedContainerApp());
+
+class AnimatedContainerApp extends StatefulWidget {
+  @override
+  _AnimatedContainerAppState createState() => _AnimatedContainerAppState();
 }
 
-class PhysicsCardDragDemo extends StatelessWidget {
+class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
+  // Define the various properties with default values. Update these properties
+  // when the user taps a FloatingActionButton.
+  double _width = 50;
+  double _height = 50;
+  Color _color = Colors.green;
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: DraggableCard(
-        child: FlutterLogo(
-          size: 128,
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Animated Container Demo'),
         ),
-      ),
-    );
-  }
-}
+        body: Center(
+          child: AnimatedContainer(
+            // Use the properties stored in the State class.
+            width: _width,
+            height: _height,
+            decoration: BoxDecoration(
+              color: _color,
+              borderRadius: _borderRadius,
+            ),
+            // Define how long the animation should take.
+            duration: Duration(seconds: 1),
+            // Provide an optional curve to make the animation feel smoother.
+            curve: Curves.fastOutSlowIn,
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.play_arrow),
+          // When the user taps the button
+          onPressed: () {
+            // Use setState to rebuild the widget with new values.
+            setState(() {
+              // Create a random number generator.
+              final random = Random();
 
-class DraggableCard extends StatefulWidget {
-  final Widget child;
-  DraggableCard({this.child});
+              // Generate a random width and height.
+              _width = random.nextInt(300).toDouble();
+              print(_width);
+              _height = random.nextInt(300).toDouble();
+              print(_height);
 
-  @override
-  _DraggableCardState createState() => _DraggableCardState();
-}
+              // Generate a random color.
+              _color = Color.fromRGBO(
+                random.nextInt(256),
+                random.nextInt(256),
+                random.nextInt(256),
+                1,
+              );
 
-class _DraggableCardState extends State<DraggableCard>
-    with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Alignment _dragAlignment = Alignment.center;
-
-  Animation<Alignment> _animation;
-
-  void _runAnimation(Offset pixelsPerSecond, Size size) {
-  _animation = _controller.drive(
-    AlignmentTween(
-      begin: _dragAlignment,
-      end: Alignment.center,
-    ),
-  );
-  // Calculate the velocity relative to the unit interval, [0,1],
-  // used by the animation controller.
-  final unitsPerSecondX = pixelsPerSecond.dx / size.width;
-  final unitsPerSecondY = pixelsPerSecond.dy / size.height;
-  final unitsPerSecond = Offset(unitsPerSecondX, unitsPerSecondY);
-  final unitVelocity = unitsPerSecond.distance;
-
-  const spring = SpringDescription(
-    mass: 30,
-    stiffness: 1,
-    damping: 1,
-  );
-
-  final simulation = SpringSimulation(spring, 0, 1, -unitVelocity);
-
-  _controller.animateWith(simulation);
-}
-
-  @override
-  void initState() {
-    super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
-    _controller.addListener(() {
-      setState(() {
-        _dragAlignment = _animation.value;
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onPanDown: (details) {
-        _controller.stop();
-      },
-      onPanUpdate: (details) {
-        setState(() {
-          _dragAlignment += Alignment(
-            details.delta.dx / (size.width / 2),
-            details.delta.dy / (size.height / 2),
-          );
-        });
-      },
-      onPanEnd: (details) {
-        _runAnimation(details.velocity.pixelsPerSecond, size);
-      },
-      child: Align(
-        alignment: _dragAlignment,
-        child: Card(
-          child: widget.child,
+              // Generate a random border radius.
+              _borderRadius =
+                  BorderRadius.circular(random.nextInt(100).toDouble());
+            });
+          },
         ),
       ),
     );
