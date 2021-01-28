@@ -1,58 +1,72 @@
+// Animate a widget using a physics simulation
+// https://flutter.dev/docs/cookbook/animation/physics-simulation
+// physics_page.dart --> rename to main.dart
+
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(MaterialApp(
-    home: Page1(),
-  ));
+  runApp(MaterialApp(home: PhysicsCardDragDemo()));
 }
 
-class Page1 extends StatelessWidget {
+class PhysicsCardDragDemo extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Goto Page 2!'),
-          onPressed: () {
-            Navigator.of(context).push(_createRoute());
-          },
+      body: DraggableCard(
+        child: FlutterLogo(
+          size: 128,
         ),
       ),
     );
   }
 }
 
-Route _createRoute() {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => Page2(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      var begin = Offset(0.0, 1.0);
-      var end = Offset.zero;
-      var curve = Curves.bounceIn;
-      // var curve = Curves.easeIn;
-      // var curve = Curves.easeInOut;
-      // var curve = Curves.decelerate;
+class DraggableCard extends StatefulWidget {
+  final Widget child;
+  DraggableCard({this.child});
 
-      var tween = Tween(begin: begin, end: end);
-      var curvedAnimation = CurvedAnimation(
-        parent: animation,
-        curve: curve,
-      );
-
-      return SlideTransition(
-        position: tween.animate(curvedAnimation),
-        child: child,
-      );
-    },
-  );
+  @override
+  _DraggableCardState createState() => _DraggableCardState();
 }
 
-class Page2 extends StatelessWidget {
+class _DraggableCardState extends State<DraggableCard>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  Alignment _dragAlignment = Alignment.center;
+
+  @override
+  void initState() {
+    _controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text('This is Page 2'),
+    var size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onPanDown: (details) {},
+      onPanUpdate: (details) {
+        setState(() {
+          _dragAlignment += Alignment(
+            details.delta.dx / (size.width / 2),
+            details.delta.dy / (size.height / 2),
+          );
+        });
+      },
+      onPanEnd: (details) {},
+      child: Align(
+        alignment: _dragAlignment,
+        child: Card(
+          child: widget.child,
+        ),
       ),
     );
   }
