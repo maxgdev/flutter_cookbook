@@ -28,10 +28,16 @@ Route _createRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, 1.0);
       var end = Offset.zero;
+      var curve = Curves.ease;
+
       var tween = Tween(begin: begin, end: end);
-      var offsetAnimation = animation.drive(tween);
+      var curvedAnimation = CurvedAnimation(
+        parent: animation,
+        curve: curve,
+      );
+
       return SlideTransition(
-        position: offsetAnimation,
+        position: tween.animate(curvedAnimation),
         child: child,
       );
     },
@@ -48,4 +54,3 @@ class Page2 extends StatelessWidget {
     );
   }
 }
-
