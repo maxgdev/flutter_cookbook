@@ -3,10 +3,10 @@
 Flutter demos/examples based on the flutter.dev cookbook examples
 
 ## Animation
-    Animate a page route transition
-    Animate a widget using a physics simulation
-    Animate the properties of a container
-    Fade a widget in and out
+    Animate a page route transition     [x]
+    Animate a widget using a physics simulation    [x]
+    Animate the properties of a container    [x]
+    Fade a widget in and out    [x]
 
 
 ## Design
