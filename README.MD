@@ -47,8 +47,8 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Animate a widget across screens                 [x]
     Navigate to a new screen and back               [x]
     Navigate with named routes                      [x]
-    Pass arguments to a named route                 []
-    Return data from a screen                       []
+    Pass arguments to a named route                 [x]
+    Return data from a screen                       [x]
     Send data to a new screen                       []
 
 ## Networking
