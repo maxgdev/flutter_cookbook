@@ -1,6 +1,5 @@
 // Animate a widget across screens
 // https://flutter.dev/docs/cookbook/navigation/hero-animations
-// animate_across_screens.dart -> main.dart
 import 'package:flutter/material.dart';
 
 void main() {
