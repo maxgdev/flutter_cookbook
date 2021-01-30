@@ -36,6 +36,9 @@ class FirstRoute extends StatelessWidget {
             // Navigate to second route when tapped.
             Navigator.push(context, MaterialPageRoute(builder: (_) {
               return SecondRoute();
+              // alternative code
+              // Navigator.push(context,MaterialPageRoute(
+              //  builder: (context) => SecondRoute()),
             }));
           },
         ),
@@ -55,6 +58,7 @@ class SecondRoute extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             // Navigate back to first route when tapped.
+            Navigator.pop(context);
           },
           child: Text('Go back!'),
         ),
