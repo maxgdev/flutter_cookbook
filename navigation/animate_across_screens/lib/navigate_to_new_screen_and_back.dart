@@ -1,6 +1,6 @@
 // Navigate to a new screen and back
 // https://flutter.dev/docs/cookbook/navigation/navigation-basics
-// navigate_to_new_screen_and_back.dart
+// Navigate_to_new_screen_and_back.dart
 import 'package:flutter/material.dart';
 
 void main() {
