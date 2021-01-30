@@ -1,6 +1,6 @@
-// Navigate to a new screen and back
-// https://flutter.dev/docs/cookbook/navigation/navigation-basics
-// navigate_to_new_screen_and_back.dart
+// Navigate with named routes
+// https://flutter.dev/docs/cookbook/navigation/named-routes
+// navigate_with_named_routes.dart
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,34 +12,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animate a widget across screens',
+      // named routes
+      initialRoute: '/',
+      routes: {
+        '/': (context) => FirstScreen(),
+        '/second': (context) => SecondScreen(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FirstRoute(),
+      // home: FirstScreen(),
     );
   }
 }
 
-class FirstRoute extends StatelessWidget {
+class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text('First Screen'),
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('Open route'),
+          child: Text('Launch screen'),
           onPressed: () {
-            // Navigate to second route when tapped.
-            Navigator.push(context, MaterialPageRoute(builder: (_) {
-              return SecondRoute();
-              // alternative code
-              // Navigator.push(context,MaterialPageRoute(
-              //  builder: (context) => SecondRoute()),
-            }));
+            // Navigate to the second screen when tapped.
+            Navigator.pushNamed(context, '/second');
           },
         ),
       ),
@@ -47,17 +47,17 @@ class FirstRoute extends StatelessWidget {
   }
 }
 
-class SecondRoute extends StatelessWidget {
+class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+        title: Text("Second Screen"),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Navigate back to first route when tapped.
+            // Navigate back to first screen when tapped.
             Navigator.pop(context);
           },
           child: Text('Go back!'),
