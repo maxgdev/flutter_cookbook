@@ -49,7 +49,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Navigate with named routes                      [x]
     Pass arguments to a named route                 [x]
     Return data from a screen                       [x]
-    Send data to a new screen                       []
+    Send data to a new screen                       [x]
 
 ## Networking
     Delete data on the internet
