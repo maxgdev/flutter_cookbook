@@ -3,10 +3,10 @@
 Flutter demos/examples based on the flutter.dev cookbook examples
 
 ## Animation
-    Animate a page route transition     [x]
-    Animate a widget using a physics simulation    [x]
-    Animate the properties of a container    [x]
-    Fade a widget in and out    [x]
+    Animate a page route transition                 [x]
+    Animate a widget using a physics simulation     [x]
+    Animate the properties of a container           [x]
+    Fade a widget in and out                        [x]
 
 
 ## Design
@@ -44,12 +44,12 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Work with long lists
 
 ## Navigation
-    Animate a widget across screens
-    Navigate to a new screen and back
-    Navigate with named routes
-    Pass arguments to a named route
-    Return data from a screen
-    Send data to a new screen
+    Animate a widget across screens                 [x]
+    Navigate to a new screen and back               [x]
+    Navigate with named routes                      [x]
+    Pass arguments to a named route                 []
+    Return data from a screen                       []
+    Send data to a new screen                       []
 
 ## Networking
     Delete data on the internet
