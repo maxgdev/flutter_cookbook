@@ -17,62 +17,48 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(),
+      home: FirstRoute(),
     );
   }
 }
 
-class MainScreen extends StatelessWidget {
+class FirstRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Main Screen'),
+        title: Text('First Route'),
       ),
-      body: GestureDetector(
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) {
-            return DetailScreen();
-          }));
-        },
-        child: Hero(  
-          tag: 'imageHero',
-          child: Image.network(
-            'https://picsum.photos/250?image=9',
-          ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Open route'),
+          onPressed: () {
+            // Navigate to second route when tapped.
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return SecondRoute();
+            }));
+          },
         ),
       ),
     );
   }
 }
 
-class DetailScreen extends StatelessWidget {
+class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Screen'),
+        title: Text("Second Route"),
       ),
-      body: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
-        child: detailWidget,
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
       ),
     );
   }
 }
-
-Widget detailWidget = Column(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    Text('Details page for image selected'),
-     Hero(  
-      tag: 'imageHero',
-      child: Image.network(
-        'https://picsum.photos/250?image=9',
-      ),
-     ),
-  ],
-);
-
