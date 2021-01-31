@@ -10,13 +10,13 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 
 
 ## Design
-    Add a Drawer to a screen
-    Display a snackbar
-    Export fonts from a package
-    Update the UI based on orientation
-    Use a custom font
-    Use themes to share colors and font styles
-    Work with tabs
+    Add a Drawer to a screen                        []
+    Display a snackbar                              []
+    Export fonts from a package                     []
+    Update the UI based on orientation              []
+    Use a custom font                               []
+    Use themes to share colors and font styles      []
+    Work with tabs                                  []
 
 ## Forms
     Build a form with validation
