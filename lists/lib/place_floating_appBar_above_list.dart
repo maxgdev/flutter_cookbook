@@ -1,6 +1,6 @@
 // Place a floating app bar above a list
 // https://flutter.dev/docs/cookbook/lists/floating-app-bar
-// place_floating_appBar_above_list.dart
+// Place a floating app bar above a list
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
