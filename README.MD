@@ -19,11 +19,11 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Work with tabs                                  [x]
 
 ## Forms
-    Build a form with validation
-    Create and style a text field
-    Focus and text fields
-    Handle changes to a text field
-    Retrieve the value of a text field
+    Build a form with validation                    []
+    Create and style a text field                   []
+    Focus and text fields                           []
+    Handle changes to a text field                  []
+    Retrieve the value of a text field              []
 
 ## Gestures
     Add Material touch ripples
@@ -38,10 +38,10 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 ## Lists
     Create a grid list                              [x]
     Create a horizontal                             [x]
-    Create lists with different types of items      []
-    Place a floating app bar above a list           []
-    Use lists                                       []
-    Work with long lists                            []
+    Create lists with different types of items      [x]
+    Place a floating app bar above a list           [x]
+    Use lists                                       [x]
+    Work with long lists                            [x]
 
 ## Navigation
     Animate a widget across screens                 [x]
