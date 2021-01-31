@@ -19,10 +19,10 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Work with tabs                                  [x]
 
 ## Forms
-    Build a form with validation                    []
+    Build a form with validation                    [x]
     Create and style a text field                   []
     Focus and text fields                           []
-    Handle changes to a text field                  []
+    Handle changes to a text field                  [x]
     Retrieve the value of a text field              []
 
 ## Gestures
