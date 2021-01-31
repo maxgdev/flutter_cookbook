@@ -1,6 +1,6 @@
 // Work with long lists
 // https://flutter.dev/docs/cookbook/lists/long-lists
-// work_with_long_lists.dart
+// Work with long lists.dart
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
