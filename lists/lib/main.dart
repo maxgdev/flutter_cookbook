@@ -1,17 +1,29 @@
-// Create a grid list
-// https://flutter.dev/docs/cookbook/lists/grid-lists
-// create_grid_list.dart
+// Create lists with different types of items
+// https://flutter.dev/docs/cookbook/lists/mixed-list
+// create_lists_with_different_types.dart
+// REVIEW ListView.builder() !!
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp(
+    items: List<ListItem>.generate(
+      1000,
+      (i) => i % 6 == 0
+          ? HeadingItem("Heading $i")
+          : MessageItem("Sender $i", "Message body $i"),
+    ),
+  ));
 }
 
 class MyApp extends StatelessWidget {
+  final List<ListItem> items;
+
+  MyApp({Key key, @required this.items}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final title = 'Grid List';
+    final title = 'Mixed List';
 
     return MaterialApp(
       title: title,
@@ -19,21 +31,58 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: GridView.count(
-          // Create a grid with 2 columns. If you change the scrollDirection to
-          // horizontal, this produces 2 rows.
-          crossAxisCount: 3,
-          // Generate 100 widgets that display their index in the List.
-          children: List.generate(100, (index) {
-            return Center(
-              child: Text(
-                'Item $index',
-                style: Theme.of(context).textTheme.headline5,
-              ),
+        body: ListView.builder(
+          // Let the ListView know how many items it needs to build.
+          itemCount: items.length,
+          // Provide a builder function. This is where the magic happens.
+          // Convert each item into a widget based on the type of item it is.
+          itemBuilder: (context, index) {
+            final item = items[index];
+
+            return ListTile(
+              title: item.buildTitle(context),
+              subtitle: item.buildSubtitle(context),
             );
-          }),
+          },
         ),
       ),
     );
   }
+}
+
+/// The base class for the different types of items the list can contain.
+abstract class ListItem {
+  /// The title line to show in a list item.
+  Widget buildTitle(BuildContext context);
+
+  /// The subtitle line, if any, to show in a list item.
+  Widget buildSubtitle(BuildContext context);
+}
+
+/// A ListItem that contains data to display a heading.
+class HeadingItem implements ListItem {
+  final String heading;
+
+  HeadingItem(this.heading);
+
+  Widget buildTitle(BuildContext context) {
+    return Text(
+      heading,
+      style: Theme.of(context).textTheme.headline5,
+    );
+  }
+
+  Widget buildSubtitle(BuildContext context) => null;
+}
+
+/// A ListItem that contains data to display a message.
+class MessageItem implements ListItem {
+  final String sender;
+  final String body;
+
+  MessageItem(this.sender, this.body);
+
+  Widget buildTitle(BuildContext context) => Text(sender);
+
+  Widget buildSubtitle(BuildContext context) => Text(body);
 }

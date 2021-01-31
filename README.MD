@@ -36,8 +36,8 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 
 
 ## Lists
-    Create a grid list                              []
-    Create a horizontal                             []
+    Create a grid list                              [x]
+    Create a horizontal                             [x]
     Create lists with different types of items      []
     Place a floating app bar above a list           []
     Use lists                                       []
