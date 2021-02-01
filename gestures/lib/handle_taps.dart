@@ -3,7 +3,7 @@
 // handle_taps.dart
 
 // Create the button.
-// Wrap it in a GestureDetector with an onTap() callback.
+// Wrap it in a GestureDetector that an onTap() callback.
 
 import 'package:flutter/material.dart';
 
