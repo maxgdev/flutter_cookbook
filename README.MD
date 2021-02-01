@@ -55,9 +55,9 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Delete data on the internet                      [x]
     Fetch data from the internet                     [x]
     Make authenticated requests                      [x]
-    Parse JSON in the background                     []
-    Send data to the internet                        []
-    Update data over the internet                    []
+    Parse JSON in the background                     [x]
+    Send data to the internet                        [x]
+    Update data over the internet                    [x]
     Work with WebSockets                             []
 
 ## Persistence
