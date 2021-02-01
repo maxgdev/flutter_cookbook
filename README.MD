@@ -43,6 +43,9 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Use lists                                       [x]
     Work with long lists                            [x]
 
+## Maintenance
+    Report errors to a service
+
 ## Navigation
     Animate a widget across screens                 [x]
     Navigate to a new screen and back               [x]
@@ -52,24 +55,24 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Send data to a new screen                       [x]
 
 ## Networking
-    Delete data on the internet                      [x]
-    Fetch data from the internet                     [x]
-    Make authenticated requests                      [x]
-    Parse JSON in the background                     [x]
-    Send data to the internet                        [x]
-    Update data over the internet                    [x]
-    Work with WebSockets                             [X]
+    Delete data on the internet                     [x]
+    Fetch data from the internet                    [x]
+    Make authenticated requests                     [x]
+    Parse JSON in the background                    [x]
+    Send data to the internet                       [x]
+    Update data over the internet                   [x]
+    Work with WebSockets                            [X]
 
 ## Persistence
-    Persist data with SQLite
-    Read and write files
-    Store key-value data on disk
+    Persist data with SQLite                        []
+    Read and write files                            []
+    Store key-value data on disk                    []
 
 ## Plugins
-    Play and pause a video
-    Take a picture using the camera
+    Play and pause a video                          []
+    Take a picture using the camera                 []
 
-## Testing
+## Testing [Pending...]
 ### Integration
     An introduction to integration testing
     Handle scrolling
