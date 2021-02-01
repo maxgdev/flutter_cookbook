@@ -1,6 +1,6 @@
 // Work with WebSockets
 // https://flutter.dev/docs/cookbook/networking/web-sockets
-// work_with_WebSockets.dart -> main.dart
+// work_with_webSockets.dart -> main.dart
 
 // 1. Connect to a WebSocket server.
 // 2. Listen for messages from the server.

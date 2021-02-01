@@ -58,7 +58,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Parse JSON in the background                     [x]
     Send data to the internet                        [x]
     Update data over the internet                    [x]
-    Work with WebSockets                             []
+    Work with WebSockets                             [X]
 
 ## Persistence
     Persist data with SQLite
