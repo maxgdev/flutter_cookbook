@@ -23,7 +23,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Create and style a text field                   [x]
     Focus and text fields                           [x]
     Handle changes to a text field                  [x]
-    Retrieve the value of a text field              []
+    Retrieve the value of a text field              [x]
 
 ## Gestures
     Add Material touch ripples
@@ -34,6 +34,10 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Fade in images with a placeholder
     Work with cached images
 
+## Images
+    Display images from the internet
+    Fade in images with a placeholder
+    Work with cached images
 
 ## Lists
     Create a grid list                              [x]
@@ -64,6 +68,23 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Persist data with SQLite
     Read and write files
     Store key-value data on disk
+
+## Plugins
+    Play and pause a video
+    Take a picture using the camera
+
+## Testing
+### Integration
+    An introduction to integration testing
+    Handle scrolling
+    Performance profiling
+### Unit
+    An introduction to unit testing
+    Mock dependencies using Mockito
+### Widget
+    An introduction to widget testing
+    Find widgets
+    Tap, drag, and enter text
 
 ## Credits
 
