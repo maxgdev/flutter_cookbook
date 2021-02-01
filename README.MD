@@ -32,6 +32,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 
 ## Images
     Display images from the internet                [x]
+    Display animated gifs from the internet         [x]
     Fade in images with a placeholder               []
     Work with cached images                         []
 
