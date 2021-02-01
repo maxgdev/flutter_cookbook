@@ -70,7 +70,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Store key-value data on disk                    []
 
 ## Plugins
-    Play and pause a video                          []
+    Play and pause a video                          [x]
     Take a picture using the camera                 []
 
 ## Testing [Pending...]
