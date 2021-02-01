@@ -1,6 +1,6 @@
-// Create and style a text field
-// https://flutter.dev/docs/cookbook/forms/text-input
-// create_and_style_text_field.dart
+// Focus and text fields
+// https://flutter.dev/docs/cookbook/forms/focus
+// Focus and text fields.dart
 
 import 'package:flutter/material.dart';
 
@@ -22,13 +22,15 @@ class MyApp extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 border: InputBorder.none,
-                hintText: 'Enter a search Term'
+                hintText: 'Enter a search Term',
               ),
+              autofocus: true,
             ),
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Enter your username'
               ),
+              // autofocus: true,
             ),
           ],),
       ),
