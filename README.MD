@@ -52,9 +52,9 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Send data to a new screen                       [x]
 
 ## Networking
-    Delete data on the internet                      []
-    Fetch data from the internet                     []
-    Make authenticated requests                      []
+    Delete data on the internet                      [x]
+    Fetch data from the internet                     [x]
+    Make authenticated requests                      [x]
     Parse JSON in the background                     []
     Send data to the internet                        []
     Update data over the internet                    []
