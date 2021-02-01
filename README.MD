@@ -26,9 +26,9 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Retrieve the value of a text field              [x]
 
 ## Gestures
-    Add Material touch ripples                      []
-    Handle taps                                     []
-    Implement swipe to dismiss                      []
+    Add Material touch ripples                      [x]
+    Handle taps                                     [x]
+    Implement swipe to dismiss                      [x]
 
 ## Images
     Display images from the internet                []
