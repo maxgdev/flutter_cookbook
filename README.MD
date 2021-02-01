@@ -26,18 +26,14 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Retrieve the value of a text field              [x]
 
 ## Gestures
-    Add Material touch ripples
-    Handle taps
-    Implement swipe to dismiss
-    Images
-    Display images from the internet
-    Fade in images with a placeholder
-    Work with cached images
+    Add Material touch ripples                      []
+    Handle taps                                     []
+    Implement swipe to dismiss                      []
 
 ## Images
-    Display images from the internet
-    Fade in images with a placeholder
-    Work with cached images
+    Display images from the internet                []
+    Fade in images with a placeholder               []
+    Work with cached images                         []
 
 ## Lists
     Create a grid list                              [x]
@@ -56,13 +52,13 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Send data to a new screen                       [x]
 
 ## Networking
-    Delete data on the internet
-    Fetch data from the internet
-    Make authenticated requests
-    Parse JSON in the background
-    Send data to the internet
-    Update data over the internet
-    Work with WebSockets
+    Delete data on the internet                      []
+    Fetch data from the internet                     []
+    Make authenticated requests                      []
+    Parse JSON in the background                     []
+    Send data to the internet                        []
+    Update data over the internet                    []
+    Work with WebSockets                             []
 
 ## Persistence
     Persist data with SQLite
