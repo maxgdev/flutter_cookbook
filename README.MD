@@ -71,7 +71,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 
 ## Plugins
     Play and pause a video                          [x]
-    Take a picture using the camera                 []
+    Take a picture using the camera                 [x]
 
 ## Testing [Pending...]
 ### Integration
