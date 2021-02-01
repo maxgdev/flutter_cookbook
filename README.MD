@@ -31,7 +31,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Implement swipe to dismiss                      [x]
 
 ## Images
-    Display images from the internet                []
+    Display images from the internet                [x]
     Fade in images with a placeholder               []
     Work with cached images                         []
 
