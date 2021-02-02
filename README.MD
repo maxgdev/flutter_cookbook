@@ -65,8 +65,8 @@ Flutter demos/examples based on the flutter.dev cookbook examples
     Work with WebSockets                            [X]
 
 ## Persistence
-    Persist data with SQLite                        []
-    Read and write files                            []
+    Persist data with SQLite                        [x]
+    Read and write files                            [x]
     Store key-value data on disk                    []
 
 ## Plugins
