@@ -14,6 +14,7 @@ dependencies:
   path: ^1.7.0
   io: ^0.3.4
   path_provider: ^1.6.27
+  shared_preferences: ^0.5.12+4
 
   cupertino_icons: ^1.0.0
 

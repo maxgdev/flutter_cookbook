@@ -67,7 +67,7 @@ Flutter demos/examples based on the flutter.dev cookbook examples
 ## Persistence
     Persist data with SQLite                        [x]
     Read and write files                            [x]
-    Store key-value data on disk                    []
+    Store key-value data on disk                    [x]
 
 ## Plugins
     Play and pause a video                          [x]
